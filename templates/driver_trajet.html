@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="icon"  href="../static/images/hey.png"type="image/png">
+  <title>#CovoiApp</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+  <!-- progress barstle -->
+  <link rel="stylesheet" href="../static/css/css-circular-prog-bar.css">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap" rel="stylesheet">
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link href="../static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link rel="stylesheet" href="../static/css/css-circular-prog-bar.css">
+  <link href="../static/css/responsive.css" rel="stylesheet" />
+  <!-- Font Icon -->
+  <link rel="stylesheet" href="../static/fonts/material-icon/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="../static/vendor1/nouislider/nouislider.min.css">
+  <!-- Main css -->
+  <link rel="stylesheet" href="../static/css/style1.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+
+</head>
+
+<body class="sub_page">
+  <div class="top_container ">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/">
+            <span>
+              #CovoiApp
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/"> Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/trajet"> Publish your ad </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="/create"> Create an account</a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="/login"> Login </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+      </div>
+    </header>
+
+  </div>
+  <!-- end header section -->
+
+  <div class="common_style">
+    <!-- sign in section --> 
+        <div class="container1">
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form">
+                        {% with messages = get_flashed_messages() %}
+                          {% if messages %}
+                            {% for message in messages %}
+                              <br><br><h6 style="color: #b4000c;">{{message}}</h6><br>
+                            {% endfor %}
+                          {% endif %}
+                        {% endwith %}
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="form-input">
+                                    <label for="address" class="required">Departure address</label>
+                                    <input type="text" name="address" id="address" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="address" class="required">Arrival address</label>
+                                    <input type="text" name="address" id="address" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="travel_date" class="required">Travel date</label>
+                                    <input type="date" name="travel_date" id="travel_date" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="travel_date" class="required">Number of places you offer</label>
+                                    <input type="text" name="travel_date" id="travel_date" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-input">
+                                    <label for="time" class="required">Earliest departure time</label>
+                                    <input type="text" name="time" id="time" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="time" class="required">Latest arrival time</label>
+                                    <input type="password" name="time" id="time" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="travel_date">Price per passenger</label>
+                                    <input type="text" name="travel_date" id="travel_date" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="travel_date" class="required">Maximum driving time</label>
+                                    <input type="text" name="travel_date" id="travel_date" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" href="/result" value="Submit" class="submit" id="submit" name="submit" />
+                            <input type="reset" value="Reset" class="submit" id="reset" name="reset" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <!-- end sign in section -->
+  </div>
+
+  <!-- info section -->
+      <section class="info_section layout_padding-top">
+        <div class="info_logo-box">
+          <h2>
+              Covoiturage
+          </h2>
+        </div>
+          <div class="container layout_padding2">
+            <div class="row">
+              <div class="col-md-3">
+                <h5>
+                    About Us                                                                             
+                </h5>
+               <p>
+                  #CovoiApp is a carpooling network. We connect passengers and drivers ready to share their car journey to allow them to go everywhere. 
+               </p>
+              </div>
+              <div class="col-md-3">
+                <h5>
+                    Contact Us
+                </h5>
+                <p>
+                    #CovoiApp your partner for daily carpooling all over Tunisia.
+                    A site dedicated to carpooling during the week and at weekends. 
+                </p>
+              </div>
+              <div class="col-md-3">
+                <h5>
+                    Useful Link 
+                </h5>
+                <ul>
+                  <li>
+                    <a href="">
+                        Our team
+                    </a>
+                  </li>
+                  <li>
+                   <a href="">
+                      Declare a complaint
+                   </a>
+                  </li>
+                  <li>
+                    <a href="legelinfo.html">
+                        Legal information
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+           
+                <div class="subscribe_container">
+                  <h5>
+                      Recieve News
+                  </h5>
+                  <div class="form_container">
+                    <form action="">
+                      <input type="email" placeholder="Enter your email">
+                      <button type="submit">
+                        Subscribe
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="container">
+              <div class="social_container">
+                 
+                  <div class="social-box">
+                    <a href="">
+                      <img src="../static/images/fb.png" alt="">
+                    </a>
+      
+                    <a href="">
+                      <img src="../static/images/twitter.png" alt="">
+                    </a>
+                    <a href="">
+                      <img src="../static/images/linkedin.png" alt="">
+                    </a>
+                    <a href="">
+                      <img src="../static/images/instagram.png" alt="">
+                    </a>
+                  </div>
+                </div>
+          </div>
+        </section>
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2019 All Rights Reserved To
+      <a href="/">#CovoiApp</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+
+
+  <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.js"></script>
+  <script src="../static/vendor1/jquery/jquery.min.js"></script>
+  <script src="../static/vendor1/nouislider/nouislider.min.js"></script>
+  <script src="../static/vendor1/wnumb/wNumb.js"></script>
+  <script src="../static/vendor1/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="../static/vendor1/jquery-validation/dist/additional-methods.min.js"></script>
+  <script src="../static/js/main.js"></script>
+
+
+
+</body>
+
+</html>
